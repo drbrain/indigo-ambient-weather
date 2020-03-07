@@ -1,0 +1,619 @@
+<?xml version="1.0"?>
+<Devices>
+  <Device type="custom" id="station">
+    <Name>Weather Station</Name>
+    <ConfigUI>
+      <Field id="address" type="textfield">
+        <Label>Station MAC address:</Label>
+      </Field>
+    </ConfigUI>
+    <UiDisplayStateId>tempf</UiDisplayStateId>
+    <States>
+      <State id="winddir" readonly="true">
+        <ValueType>Number</ValueType>
+        <TriggerLabel>Instantaneous wind direction</TriggerLabel>
+        <ControlPageLabel>Instantaneous wind direction</ControlPageLabel>
+      </State>
+      <State id="windspeedmph" readonly="true">
+        <ValueType>Number</ValueType>
+        <TriggerLabel>Instantaneous wind speed</TriggerLabel>
+        <ControlPageLabel>Instantaneous wind speed</ControlPageLabel>
+      </State>
+      <State id="windgustmph" readonly="true">
+        <ValueType>Number</ValueType>
+        <TriggerLabel>Maximum wind speed in last ten minutes</TriggerLabel>
+        <ControlPageLabel>Maximum wind speed in last ten minutes</ControlPageLabel>
+      </State>
+      <State id="maxdailygust" readonly="true">
+        <ValueType>Number</ValueType>
+        <TriggerLabel>Maximum wind speed in the last day</TriggerLabel>
+        <ControlPageLabel>Maximum wind speed in the last day</ControlPageLabel>
+      </State>
+      <State id="windgustdir" readonly="true">
+        <ValueType>Number</ValueType>
+        <TriggerLabel>Direction of last wind gust</TriggerLabel>
+        <ControlPageLabel>Direction of last wind gust</ControlPageLabel>
+      </State>
+      <State id="windspdmph_avg2m" readonly="true">
+        <ValueType>Number</ValueType>
+        <TriggerLabel>Average wind speed for last 2 minutes</TriggerLabel>
+        <ControlPageLabel>Average wind speed for last 2 minutes</ControlPageLabel>
+      </State>
+      <State id="winddir_avg2m" readonly="true">
+        <ValueType>Number</ValueType>
+        <TriggerLabel>Average wind direction for last 2 minutes</TriggerLabel>
+        <ControlPageLabel>Average wind direction for last 2 minutes</ControlPageLabel>
+      </State>
+      <State id="windspdmph_avg10m" readonly="true">
+        <ValueType>Number</ValueType>
+        <TriggerLabel>Average wind speed for last 10 minutes</TriggerLabel>
+        <ControlPageLabel>Average wind speed for last 10 minutes</ControlPageLabel>
+      </State>
+      <State id="winddir_avg10m" readonly="true">
+        <ValueType>Number</ValueType>
+        <TriggerLabel>Average wind direction for last 10 minutes</TriggerLabel>
+        <ControlPageLabel>Average wind direction for last 10 minutes</ControlPageLabel>
+      </State>
+      <State id="humidity" readonly="true">
+        <ValueType>Number</ValueType>
+        <TriggerLabel>Outdoor humidity</TriggerLabel>
+        <ControlPageLabel>Outdoor humidity</ControlPageLabel>
+      </State>
+      <State id="humidity1" readonly="true">
+        <ValueType>Number</ValueType>
+        <TriggerLabel>Sensor 1 humidity</TriggerLabel>
+        <ControlPageLabel>Sensor 1 humidity</ControlPageLabel>
+      </State>
+      <State id="humidity2" readonly="true">
+        <ValueType>Number</ValueType>
+        <TriggerLabel>Sensor 2 humidity</TriggerLabel>
+        <ControlPageLabel>Sensor 2 humidity</ControlPageLabel>
+      </State>
+      <State id="humidity3" readonly="true">
+        <ValueType>Number</ValueType>
+        <TriggerLabel>Sensor 3 humidity</TriggerLabel>
+        <ControlPageLabel>Sensor 3 humidity</ControlPageLabel>
+      </State>
+      <State id="humidity4" readonly="true">
+        <ValueType>Number</ValueType>
+        <TriggerLabel>Sensor 4 humidity</TriggerLabel>
+        <ControlPageLabel>Sensor 4 humidity</ControlPageLabel>
+      </State>
+      <State id="humidity5" readonly="true">
+        <ValueType>Number</ValueType>
+        <TriggerLabel>Sensor 5 humidity</TriggerLabel>
+        <ControlPageLabel>Sensor 5 humidity</ControlPageLabel>
+      </State>
+      <State id="humidity6" readonly="true">
+        <ValueType>Number</ValueType>
+        <TriggerLabel>Sensor 6 humidity</TriggerLabel>
+        <ControlPageLabel>Sensor 6 humidity</ControlPageLabel>
+      </State>
+      <State id="humidity7" readonly="true">
+        <ValueType>Number</ValueType>
+        <TriggerLabel>Sensor 7 humidity</TriggerLabel>
+        <ControlPageLabel>Sensor 7 humidity</ControlPageLabel>
+      </State>
+      <State id="humidity8" readonly="true">
+        <ValueType>Number</ValueType>
+        <TriggerLabel>Sensor 8 humidity</TriggerLabel>
+        <ControlPageLabel>Sensor 8 humidity</ControlPageLabel>
+      </State>
+      <State id="humidity9" readonly="true">
+        <ValueType>Number</ValueType>
+        <TriggerLabel>Sensor 9 humidity</TriggerLabel>
+        <ControlPageLabel>Sensor 9 humidity</ControlPageLabel>
+      </State>
+      <State id="humidity10" readonly="true">
+        <ValueType>Number</ValueType>
+        <TriggerLabel>Sensor 10 humidity</TriggerLabel>
+        <ControlPageLabel>Sensor 10 humidity</ControlPageLabel>
+      </State>
+      <State id="humidityin" readonly="true">
+        <ValueType>Number</ValueType>
+        <TriggerLabel>Indoor humidity</TriggerLabel>
+        <ControlPageLabel>Indoor humidity</ControlPageLabel>
+      </State>
+      <State id="tempf" readonly="true">
+        <ValueType>Number</ValueType>
+        <TriggerLabel>Outdoor temperature</TriggerLabel>
+        <ControlPageLabel>Outdoor temperature</ControlPageLabel>
+      </State>
+      <State id="temp1f" readonly="true">
+        <ValueType>Number</ValueType>
+        <TriggerLabel>Sensor 1 temperature</TriggerLabel>
+        <ControlPageLabel>Sensor 1 temperature</ControlPageLabel>
+      </State>
+      <State id="temp2f" readonly="true">
+        <ValueType>Number</ValueType>
+        <TriggerLabel>Sensor 2 temperature</TriggerLabel>
+        <ControlPageLabel>Sensor 2 temperature</ControlPageLabel>
+      </State>
+      <State id="temp3f" readonly="true">
+        <ValueType>Number</ValueType>
+        <TriggerLabel>Sensor 3 temperature</TriggerLabel>
+        <ControlPageLabel>Sensor 3 temperature</ControlPageLabel>
+      </State>
+      <State id="temp4f" readonly="true">
+        <ValueType>Number</ValueType>
+        <TriggerLabel>Sensor 4 temperature</TriggerLabel>
+        <ControlPageLabel>Sensor 4 temperature</ControlPageLabel>
+      </State>
+      <State id="temp5f" readonly="true">
+        <ValueType>Number</ValueType>
+        <TriggerLabel>Sensor 5 temperature</TriggerLabel>
+        <ControlPageLabel>Sensor 5 temperature</ControlPageLabel>
+      </State>
+      <State id="temp6f" readonly="true">
+        <ValueType>Number</ValueType>
+        <TriggerLabel>Sensor 6 temperature</TriggerLabel>
+        <ControlPageLabel>Sensor 6 temperature</ControlPageLabel>
+      </State>
+      <State id="temp7f" readonly="true">
+        <ValueType>Number</ValueType>
+        <TriggerLabel>Sensor 7 temperature</TriggerLabel>
+        <ControlPageLabel>Sensor 7 temperature</ControlPageLabel>
+      </State>
+      <State id="temp8f" readonly="true">
+        <ValueType>Number</ValueType>
+        <TriggerLabel>Sensor 8 temperature</TriggerLabel>
+        <ControlPageLabel>Sensor 8 temperature</ControlPageLabel>
+      </State>
+      <State id="temp9f" readonly="true">
+        <ValueType>Number</ValueType>
+        <TriggerLabel>Sensor 9 temperature</TriggerLabel>
+        <ControlPageLabel>Sensor 9 temperature</ControlPageLabel>
+      </State>
+      <State id="temp10f" readonly="true">
+        <ValueType>Number</ValueType>
+        <TriggerLabel>Sensor 10 temperature</TriggerLabel>
+        <ControlPageLabel>Sensor 10 temperature</ControlPageLabel>
+      </State>
+      <State id="soiltemp1f" readonly="true">
+        <ValueType>Number</ValueType>
+        <TriggerLabel>Soil sensor 1 temperature</TriggerLabel>
+        <ControlPageLabel>Soil sensor 1 temperature</ControlPageLabel>
+      </State>
+      <State id="soiltemp2f" readonly="true">
+        <ValueType>Number</ValueType>
+        <TriggerLabel>Soil sensor 2 temperature</TriggerLabel>
+        <ControlPageLabel>Soil sensor 2 temperature</ControlPageLabel>
+      </State>
+      <State id="soiltemp3f" readonly="true">
+        <ValueType>Number</ValueType>
+        <TriggerLabel>Soil sensor 3 temperature</TriggerLabel>
+        <ControlPageLabel>Soil sensor 3 temperature</ControlPageLabel>
+      </State>
+      <State id="soiltemp4f" readonly="true">
+        <ValueType>Number</ValueType>
+        <TriggerLabel>Soil sensor 4 temperature</TriggerLabel>
+        <ControlPageLabel>Soil sensor 4 temperature</ControlPageLabel>
+      </State>
+      <State id="soiltemp5f" readonly="true">
+        <ValueType>Number</ValueType>
+        <TriggerLabel>Soil sensor 5 temperature</TriggerLabel>
+        <ControlPageLabel>Soil sensor 5 temperature</ControlPageLabel>
+      </State>
+      <State id="soiltemp6f" readonly="true">
+        <ValueType>Number</ValueType>
+        <TriggerLabel>Soil sensor 6 temperature</TriggerLabel>
+        <ControlPageLabel>Soil sensor 6 temperature</ControlPageLabel>
+      </State>
+      <State id="soiltemp7f" readonly="true">
+        <ValueType>Number</ValueType>
+        <TriggerLabel>Soil sensor 7 temperature</TriggerLabel>
+        <ControlPageLabel>Soil sensor 7 temperature</ControlPageLabel>
+      </State>
+      <State id="soiltemp8f" readonly="true">
+        <ValueType>Number</ValueType>
+        <TriggerLabel>Soil sensor 8 temperature</TriggerLabel>
+        <ControlPageLabel>Soil sensor 8 temperature</ControlPageLabel>
+      </State>
+      <State id="soiltemp9f" readonly="true">
+        <ValueType>Number</ValueType>
+        <TriggerLabel>Soil sensor 9 temperature</TriggerLabel>
+        <ControlPageLabel>Soil sensor 9 temperature</ControlPageLabel>
+      </State>
+      <State id="soiltemp10f" readonly="true">
+        <ValueType>Number</ValueType>
+        <TriggerLabel>Soil sensor 10 temperature</TriggerLabel>
+        <ControlPageLabel>Soil sensor 10 temperature</ControlPageLabel>
+      </State>
+      <State id="soilhum1" readonly="true">
+        <ValueType>Number</ValueType>
+        <TriggerLabel>Soil sensor 1 humidity</TriggerLabel>
+        <ControlPageLabel>Soil sensor 1 humidity</ControlPageLabel>
+      </State>
+      <State id="soilhum2" readonly="true">
+        <ValueType>Number</ValueType>
+        <TriggerLabel>Soil sensor 2 humidity</TriggerLabel>
+        <ControlPageLabel>Soil sensor 2 humidity</ControlPageLabel>
+      </State>
+      <State id="soilhum3" readonly="true">
+        <ValueType>Number</ValueType>
+        <TriggerLabel>Soil sensor 3 humidity</TriggerLabel>
+        <ControlPageLabel>Soil sensor 3 humidity</ControlPageLabel>
+      </State>
+      <State id="soilhum4" readonly="true">
+        <ValueType>Number</ValueType>
+        <TriggerLabel>Soil sensor 4 humidity</TriggerLabel>
+        <ControlPageLabel>Soil sensor 4 humidity</ControlPageLabel>
+      </State>
+      <State id="soilhum5" readonly="true">
+        <ValueType>Number</ValueType>
+        <TriggerLabel>Soil sensor 5 humidity</TriggerLabel>
+        <ControlPageLabel>Soil sensor 5 humidity</ControlPageLabel>
+      </State>
+      <State id="soilhum6" readonly="true">
+        <ValueType>Number</ValueType>
+        <TriggerLabel>Soil sensor 6 humidity</TriggerLabel>
+        <ControlPageLabel>Soil sensor 6 humidity</ControlPageLabel>
+      </State>
+      <State id="soilhum7" readonly="true">
+        <ValueType>Number</ValueType>
+        <TriggerLabel>Soil sensor 7 humidity</TriggerLabel>
+        <ControlPageLabel>Soil sensor 7 humidity</ControlPageLabel>
+      </State>
+      <State id="soilhum8" readonly="true">
+        <ValueType>Number</ValueType>
+        <TriggerLabel>Soil sensor 8 humidity</TriggerLabel>
+        <ControlPageLabel>Soil sensor 8 humidity</ControlPageLabel>
+      </State>
+      <State id="soilhum9" readonly="true">
+        <ValueType>Number</ValueType>
+        <TriggerLabel>Soil sensor 9 humidity</TriggerLabel>
+        <ControlPageLabel>Soil sensor 9 humidity</ControlPageLabel>
+      </State>
+      <State id="soilhum10" readonly="true">
+        <ValueType>Number</ValueType>
+        <TriggerLabel>Soil sensor 10 humidity</TriggerLabel>
+        <ControlPageLabel>Soil sensor 10 humidity</ControlPageLabel>
+      </State>
+      <State id="tempinf" readonly="true">
+        <ValueType>Number</ValueType>
+        <TriggerLabel>Outdoor temperature</TriggerLabel>
+        <ControlPageLabel>Outdoor temperature</ControlPageLabel>
+      </State>
+      <State id="battout" readonly="true">
+        <ValueType>Boolean</ValueType>
+        <TriggerLabel>Weather station battery OK</TriggerLabel>
+        <ControlPageLabel>Weather station battery OK</ControlPageLabel>
+      </State>
+      <State id="batt1" readonly="true">
+        <ValueType>Boolean</ValueType>
+        <TriggerLabel>Sensor 1 battery OK</TriggerLabel>
+        <ControlPageLabel>Sensor 1 battery OK</ControlPageLabel>
+      </State>
+      <State id="batt2" readonly="true">
+        <ValueType>Boolean</ValueType>
+        <TriggerLabel>Sensor 2 battery OK</TriggerLabel>
+        <ControlPageLabel>Sensor 2 battery OK</ControlPageLabel>
+      </State>
+      <State id="batt3" readonly="true">
+        <ValueType>Boolean</ValueType>
+        <TriggerLabel>Sensor 3 battery OK</TriggerLabel>
+        <ControlPageLabel>Sensor 3 battery OK</ControlPageLabel>
+      </State>
+      <State id="batt4" readonly="true">
+        <ValueType>Boolean</ValueType>
+        <TriggerLabel>Sensor 4 battery OK</TriggerLabel>
+        <ControlPageLabel>Sensor 4 battery OK</ControlPageLabel>
+      </State>
+      <State id="batt5" readonly="true">
+        <ValueType>Boolean</ValueType>
+        <TriggerLabel>Sensor 5 battery OK</TriggerLabel>
+        <ControlPageLabel>Sensor 5 battery OK</ControlPageLabel>
+      </State>
+      <State id="batt6" readonly="true">
+        <ValueType>Boolean</ValueType>
+        <TriggerLabel>Sensor 6 battery OK</TriggerLabel>
+        <ControlPageLabel>Sensor 6 battery OK</ControlPageLabel>
+      </State>
+      <State id="batt7" readonly="true">
+        <ValueType>Boolean</ValueType>
+        <TriggerLabel>Sensor 7 battery OK</TriggerLabel>
+        <ControlPageLabel>Sensor 7 battery OK</ControlPageLabel>
+      </State>
+      <State id="batt8" readonly="true">
+        <ValueType>Boolean</ValueType>
+        <TriggerLabel>Sensor 8 battery OK</TriggerLabel>
+        <ControlPageLabel>Sensor 8 battery OK</ControlPageLabel>
+      </State>
+      <State id="batt9" readonly="true">
+        <ValueType>Boolean</ValueType>
+        <TriggerLabel>Sensor 9 battery OK</TriggerLabel>
+        <ControlPageLabel>Sensor 9 battery OK</ControlPageLabel>
+      </State>
+      <State id="batt10" readonly="true">
+        <ValueType>Boolean</ValueType>
+        <TriggerLabel>Sensor 10 battery OK</TriggerLabel>
+        <ControlPageLabel>Sensor 10 battery OK</ControlPageLabel>
+      </State>
+      <State id="battin" readonly="true">
+        <ValueType>Boolean</ValueType>
+        <TriggerLabel>Indoor sensor battery OK</TriggerLabel>
+        <ControlPageLabel>Indoor sensor battery OK</ControlPageLabel>
+      </State>
+      <State id="batt_25" readonly="true">
+        <ValueType>Boolean</ValueType>
+        <TriggerLabel>PM2.5 sensor battery OK</TriggerLabel>
+        <ControlPageLabel>PM2.5 sensor battery OK</ControlPageLabel>
+      </State>
+      <State id="hourlyrainin" readonly="true">
+        <ValueType>Number</ValueType>
+        <TriggerLabel>Hourly rain rate</TriggerLabel>
+        <ControlPageLabel>Hourly rain rate</ControlPageLabel>
+      </State>
+      <State id="dailyrainin" readonly="true">
+        <ValueType>Number</ValueType>
+        <TriggerLabel>Daily rain rate</TriggerLabel>
+        <ControlPageLabel>Daily rain rate</ControlPageLabel>
+      </State>
+      <State id="last24hourrainin" readonly="true">
+        <ValueType>Number</ValueType>
+        <TriggerLabel>Rain total for last 24 hours</TriggerLabel>
+        <ControlPageLabel>Rain total for last 24 hours</ControlPageLabel>
+      </State>
+      <State id="weeklyrainin" readonly="true">
+        <ValueType>Number</ValueType>
+        <TriggerLabel>Rain total for week</TriggerLabel>
+        <ControlPageLabel>Rain total for week</ControlPageLabel>
+      </State>
+      <State id="monthlyrainin" readonly="true">
+        <ValueType>Number</ValueType>
+        <TriggerLabel>Rain total for month</TriggerLabel>
+        <ControlPageLabel>Rain total for month</ControlPageLabel>
+      </State>
+      <State id="yearlyrainin" readonly="true">
+        <ValueType>Number</ValueType>
+        <TriggerLabel>Rain total for year</TriggerLabel>
+        <ControlPageLabel>Rain total for year</ControlPageLabel>
+      </State>
+      <State id="eventrainin" readonly="true">
+        <ValueType>Number</ValueType>
+        <TriggerLabel>Event rain</TriggerLabel>
+        <ControlPageLabel>Event rain</ControlPageLabel>
+      </State>
+      <State id="totalrainin" readonly="true">
+        <ValueType>Number</ValueType>
+        <TriggerLabel>Total rain</TriggerLabel>
+        <ControlPageLabel>Total rain</ControlPageLabel>
+      </State>
+      <State id="baromrelin" readonly="true">
+        <ValueType>Number</ValueType>
+        <TriggerLabel>Relative pressure</TriggerLabel>
+        <ControlPageLabel>Relative pressure</ControlPageLabel>
+      </State>
+      <State id="baromabsin" readonly="true">
+        <ValueType>Number</ValueType>
+        <TriggerLabel>Absolute pressure</TriggerLabel>
+        <ControlPageLabel>Absolute pressure</ControlPageLabel>
+      </State>
+      <State id="uv" readonly="true">
+        <ValueType>Number</ValueType>
+        <TriggerLabel>UV radiation index</TriggerLabel>
+        <ControlPageLabel>UV radiation index</ControlPageLabel>
+      </State>
+      <State id="solarradiation" readonly="true">
+        <ValueType>Number</ValueType>
+        <TriggerLabel>Solar radiation</TriggerLabel>
+        <ControlPageLabel>Solar radiation</ControlPageLabel>
+      </State>
+      <State id="co2" readonly="true">
+        <ValueType>Number</ValueType>
+        <TriggerLabel>CO2</TriggerLabel>
+        <ControlPageLabel>CO2</ControlPageLabel>
+      </State>
+      <State id="relay1" readonly="true">
+        <ValueType>Number</ValueType>
+        <TriggerLabel>Relay 1</TriggerLabel>
+        <ControlPageLabel>Relay 1</ControlPageLabel>
+      </State>
+      <State id="relay2" readonly="true">
+        <ValueType>Number</ValueType>
+        <TriggerLabel>Relay 2</TriggerLabel>
+        <ControlPageLabel>Relay 2</ControlPageLabel>
+      </State>
+      <State id="relay3" readonly="true">
+        <ValueType>Number</ValueType>
+        <TriggerLabel>Relay 3</TriggerLabel>
+        <ControlPageLabel>Relay 3</ControlPageLabel>
+      </State>
+      <State id="relay4" readonly="true">
+        <ValueType>Number</ValueType>
+        <TriggerLabel>Relay 4</TriggerLabel>
+        <ControlPageLabel>Relay 4</ControlPageLabel>
+      </State>
+      <State id="relay5" readonly="true">
+        <ValueType>Number</ValueType>
+        <TriggerLabel>Relay 5</TriggerLabel>
+        <ControlPageLabel>Relay 5</ControlPageLabel>
+      </State>
+      <State id="relay6" readonly="true">
+        <ValueType>Number</ValueType>
+        <TriggerLabel>Relay 6</TriggerLabel>
+        <ControlPageLabel>Relay 6</ControlPageLabel>
+      </State>
+      <State id="relay7" readonly="true">
+        <ValueType>Number</ValueType>
+        <TriggerLabel>Relay 7</TriggerLabel>
+        <ControlPageLabel>Relay 7</ControlPageLabel>
+      </State>
+      <State id="relay8" readonly="true">
+        <ValueType>Number</ValueType>
+        <TriggerLabel>Relay 8</TriggerLabel>
+        <ControlPageLabel>Relay 8</ControlPageLabel>
+      </State>
+      <State id="relay9" readonly="true">
+        <ValueType>Number</ValueType>
+        <TriggerLabel>Relay 9</TriggerLabel>
+        <ControlPageLabel>Relay 9</ControlPageLabel>
+      </State>
+      <State id="relay10" readonly="true">
+        <ValueType>Number</ValueType>
+        <TriggerLabel>Relay 10</TriggerLabel>
+        <ControlPageLabel>Relay 10</ControlPageLabel>
+      </State>
+      <State id="pm25" readonly="true">
+        <ValueType>Number</ValueType>
+        <TriggerLabel>PM2.5 air quality</TriggerLabel>
+        <ControlPageLabel>PM2.5 air quality</ControlPageLabel>
+      </State>
+      <State id="pm25_24h" readonly="true">
+        <ValueType>Number</ValueType>
+        <TriggerLabel>PM2.5 air quality 24 hour average</TriggerLabel>
+        <ControlPageLabel>PM2.5 air quality 24 hour average</ControlPageLabel>
+      </State>
+      <State id="pm25_in" readonly="true">
+        <ValueType>Number</ValueType>
+        <TriggerLabel>PM2.5 indoor air quality</TriggerLabel>
+        <ControlPageLabel>PM2.5 indoor air quality</ControlPageLabel>
+      </State>
+      <State id="pm25_in_24h" readonly="true">
+        <ValueType>PM2.5</ValueType>
+        <TriggerLabel>air quality 24 hour average</TriggerLabel>
+        <ControlPageLabel>air quality 24 hour average</ControlPageLabel>
+      </State>
+      <State id="tz" readonly="true">
+        <ValueType>String</ValueType>
+        <TriggerLabel>Weather station time zone</TriggerLabel>
+        <ControlPageLabel>Weather station time zone</ControlPageLabel>
+      </State>
+      <State id="dateutc" readonly="true">
+        <ValueType>String</ValueType>
+        <TriggerLabel>UTC time of observation</TriggerLabel>
+        <ControlPageLabel>UTC time of observation</ControlPageLabel>
+      </State>
+      <State id="lastRain" readonly="true">
+        <ValueType>String</ValueType>
+        <TriggerLabel>Date of last hourly rain > 0</TriggerLabel>
+        <ControlPageLabel>Date of last hourly rain > 0</ControlPageLabel>
+      </State>
+      <State id="dewPoint" readonly="true">
+        <ValueType>Number</ValueType>
+        <TriggerLabel>Dew point</TriggerLabel>
+        <ControlPageLabel>Dew point</ControlPageLabel>
+      </State>
+      <State id="feelsLike" readonly="true">
+        <ValueType>Number</ValueType>
+        <TriggerLabel>Feels like temperature</TriggerLabel>
+        <ControlPageLabel>Feels like temperature</ControlPageLabel>
+      </State>
+      <State id="date" readonly="true">
+        <ValueType>String</ValueType>
+        <TriggerLabel>Observation date</TriggerLabel>
+        <ControlPageLabel>Observation date</ControlPageLabel>
+      </State>
+      <State id="feelsLike1" readonly="true">
+        <ValueType>Number</ValueType>
+        <TriggerLabel>Sensor 1 feels like temperature</TriggerLabel>
+        <ControlPageLabel>Sensor 1 feels like temperature</ControlPageLabel>
+      </State>
+      <State id="feelsLike2" readonly="true">
+        <ValueType>Number</ValueType>
+        <TriggerLabel>Sensor 2 feels like temperature</TriggerLabel>
+        <ControlPageLabel>Sensor 2 feels like temperature</ControlPageLabel>
+      </State>
+      <State id="feelsLike3" readonly="true">
+        <ValueType>Number</ValueType>
+        <TriggerLabel>Sensor 3 feels like temperature</TriggerLabel>
+        <ControlPageLabel>Sensor 3 feels like temperature</ControlPageLabel>
+      </State>
+      <State id="feelsLike4" readonly="true">
+        <ValueType>Number</ValueType>
+        <TriggerLabel>Sensor 4 feels like temperature</TriggerLabel>
+        <ControlPageLabel>Sensor 4 feels like temperature</ControlPageLabel>
+      </State>
+      <State id="feelsLike5" readonly="true">
+        <ValueType>Number</ValueType>
+        <TriggerLabel>Sensor 5 feels like temperature</TriggerLabel>
+        <ControlPageLabel>Sensor 5 feels like temperature</ControlPageLabel>
+      </State>
+      <State id="feelsLike6" readonly="true">
+        <ValueType>Number</ValueType>
+        <TriggerLabel>Sensor 6 feels like temperature</TriggerLabel>
+        <ControlPageLabel>Sensor 6 feels like temperature</ControlPageLabel>
+      </State>
+      <State id="feelsLike7" readonly="true">
+        <ValueType>Number</ValueType>
+        <TriggerLabel>Sensor 7 feels like temperature</TriggerLabel>
+        <ControlPageLabel>Sensor 7 feels like temperature</ControlPageLabel>
+      </State>
+      <State id="feelsLike8" readonly="true">
+        <ValueType>Number</ValueType>
+        <TriggerLabel>Sensor 8 feels like temperature</TriggerLabel>
+        <ControlPageLabel>Sensor 8 feels like temperature</ControlPageLabel>
+      </State>
+      <State id="feelsLike9" readonly="true">
+        <ValueType>Number</ValueType>
+        <TriggerLabel>Sensor 9 feels like temperature</TriggerLabel>
+        <ControlPageLabel>Sensor 9 feels like temperature</ControlPageLabel>
+      </State>
+      <State id="feelsLike10" readonly="true">
+        <ValueType>Number</ValueType>
+        <TriggerLabel>Sensor 10 feels like temperature</TriggerLabel>
+        <ControlPageLabel>Sensor 10 feels like temperature</ControlPageLabel>
+      </State>
+      <State id="dewPoint1" readonly="true">
+        <ValueType>Number</ValueType>
+        <TriggerLabel>Sensor 1 dew point</TriggerLabel>
+        <ControlPageLabel>Sensor 1 dew point</ControlPageLabel>
+      </State>
+      <State id="dewPoint2" readonly="true">
+        <ValueType>Number</ValueType>
+        <TriggerLabel>Sensor 2 dew point</TriggerLabel>
+        <ControlPageLabel>Sensor 2 dew point</ControlPageLabel>
+      </State>
+      <State id="dewPoint3" readonly="true">
+        <ValueType>Number</ValueType>
+        <TriggerLabel>Sensor 3 dew point</TriggerLabel>
+        <ControlPageLabel>Sensor 3 dew point</ControlPageLabel>
+      </State>
+      <State id="dewPoint4" readonly="true">
+        <ValueType>Number</ValueType>
+        <TriggerLabel>Sensor 4 dew point</TriggerLabel>
+        <ControlPageLabel>Sensor 4 dew point</ControlPageLabel>
+      </State>
+      <State id="dewPoint5" readonly="true">
+        <ValueType>Number</ValueType>
+        <TriggerLabel>Sensor 5 dew point</TriggerLabel>
+        <ControlPageLabel>Sensor 5 dew point</ControlPageLabel>
+      </State>
+      <State id="dewPoint6" readonly="true">
+        <ValueType>Number</ValueType>
+        <TriggerLabel>Sensor 6 dew point</TriggerLabel>
+        <ControlPageLabel>Sensor 6 dew point</ControlPageLabel>
+      </State>
+      <State id="dewPoint7" readonly="true">
+        <ValueType>Number</ValueType>
+        <TriggerLabel>Sensor 7 dew point</TriggerLabel>
+        <ControlPageLabel>Sensor 7 dew point</ControlPageLabel>
+      </State>
+      <State id="dewPoint8" readonly="true">
+        <ValueType>Number</ValueType>
+        <TriggerLabel>Sensor 8 dew point</TriggerLabel>
+        <ControlPageLabel>Sensor 8 dew point</ControlPageLabel>
+      </State>
+      <State id="dewPoint9" readonly="true">
+        <ValueType>Number</ValueType>
+        <TriggerLabel>Sensor 9 dew point</TriggerLabel>
+        <ControlPageLabel>Sensor 9 dew point</ControlPageLabel>
+      </State>
+      <State id="dewPoint10" readonly="true">
+        <ValueType>Number</ValueType>
+        <TriggerLabel>Sensor 10 dew point</TriggerLabel>
+        <ControlPageLabel>Sensor 10 dew point</ControlPageLabel>
+      </State>
+      <State id="feelsLikein" readonly="true">
+        <ValueType>Number</ValueType>
+        <TriggerLabel>Indoor feels like temperature</TriggerLabel>
+        <ControlPageLabel>Indoor feels like temperature</ControlPageLabel>
+      </State>
+      <State id="dewPointin" readonly="true">
+        <ValueType>Number</ValueType>
+        <TriggerLabel>Indoor dew point</TriggerLabel>
+        <ControlPageLabel>Indoor dew point</ControlPageLabel>
+      </State>
+    </States>
+  </Device>
+</Devices>

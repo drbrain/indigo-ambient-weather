@@ -1,0 +1,13 @@
+<?xml version="1.0"?>
+<PluginConfig>
+  <SupportURL>https://github.com/drbrain/indigo-ambient-weather/</SupportURL>
+  <Field type="textfield" id="apiKey">
+    <Label>Ambient Weather API key</Label>
+  </Field>
+  <Field type="label" id="apiKeyLabel">
+    <Label>Go to https://dashboard.ambientweather.net/account to create an API key</Label>
+  </Field>
+  <Field type="checkbox" id="debug">
+    <Label>Enable debug logs:</Label>
+  </Field>
+</PluginConfig>
