@@ -339,6 +339,51 @@
         <TriggerLabel>PM2.5 sensor battery OK</TriggerLabel>
         <ControlPageLabel>PM2.5 sensor battery OK</ControlPageLabel>
       </State>
+      <State id="battsm1" readonly="true">
+        <ValueType>Boolean</ValueType>
+        <TriggerLabel>Soil sensor 1 battery OK</TriggerLabel>
+        <ControlPageLabel>Soil sensor 1 battery OK</ControlPageLabel>
+      </State>
+      <State id="battsm2" readonly="true">
+        <ValueType>Boolean</ValueType>
+        <TriggerLabel>Soil sensor 2 battery OK</TriggerLabel>
+        <ControlPageLabel>Soil sensor 2 battery OK</ControlPageLabel>
+      </State>
+      <State id="battsm3" readonly="true">
+        <ValueType>Boolean</ValueType>
+        <TriggerLabel>Soil sensor 3 battery OK</TriggerLabel>
+        <ControlPageLabel>Soil sensor 3 battery OK</ControlPageLabel>
+      </State>
+      <State id="battsm4" readonly="true">
+        <ValueType>Boolean</ValueType>
+        <TriggerLabel>Soil sensor 4 battery OK</TriggerLabel>
+        <ControlPageLabel>Soil sensor 4 battery OK</ControlPageLabel>
+      </State>
+      <State id="battsm5" readonly="true">
+        <ValueType>Boolean</ValueType>
+        <TriggerLabel>Soil sensor 5 battery OK</TriggerLabel>
+        <ControlPageLabel>Soil sensor 5 battery OK</ControlPageLabel>
+      </State>
+      <State id="battsm6" readonly="true">
+        <ValueType>Boolean</ValueType>
+        <TriggerLabel>Soil sensor 6 battery OK</TriggerLabel>
+        <ControlPageLabel>Soil sensor 6 battery OK</ControlPageLabel>
+      </State>
+      <State id="battsm7" readonly="true">
+        <ValueType>Boolean</ValueType>
+        <TriggerLabel>Soil sensor 7 battery OK</TriggerLabel>
+        <ControlPageLabel>Soil sensor 7 battery OK</ControlPageLabel>
+      </State>
+      <State id="battsm8" readonly="true">
+        <ValueType>Boolean</ValueType>
+        <TriggerLabel>Soil sensor 8 battery OK</TriggerLabel>
+        <ControlPageLabel>Soil sensor 8 battery OK</ControlPageLabel>
+      </State>
+      <State id="batt_lightning" readonly="true">
+        <ValueType>Boolean</ValueType>
+        <TriggerLabel>Lightning sensor battery OK</TriggerLabel>
+        <ControlPageLabel>Lightning sensor battery OK</ControlPageLabel>
+      </State>
       <State id="hourlyrainin" readonly="true">
         <ValueType>Number</ValueType>
         <TriggerLabel>Hourly rain rate</TriggerLabel>
@@ -473,6 +518,11 @@
         <ValueType>PM2.5</ValueType>
         <TriggerLabel>air quality 24 hour average</TriggerLabel>
         <ControlPageLabel>air quality 24 hour average</ControlPageLabel>
+      </State>
+      <State id="loc" readonly="true">
+        <ValueType>String</ValueType>
+        <TriggerLabel>Location</TriggerLabel>
+        <ControlPageLabel>Location</ControlPageLabel>
       </State>
       <State id="tz" readonly="true">
         <ValueType>String</ValueType>
@@ -613,6 +663,16 @@
         <ValueType>Number</ValueType>
         <TriggerLabel>Indoor dew point</TriggerLabel>
         <ControlPageLabel>Indoor dew point</ControlPageLabel>
+      </State>
+      <State id="lightning_hour" readonly="true">
+        <ValueType>Number</ValueType>
+        <TriggerLabel>Lightning strikes this hour</TriggerLabel>
+        <ControlPageLabel>Lightning strikes this hour</ControlPageLabel>
+      </State>
+      <State id="lightning_day" readonly="true">
+        <ValueType>Number</ValueType>
+        <TriggerLabel>Lightning strikes today</TriggerLabel>
+        <ControlPageLabel>Lightning strikes today</ControlPageLabel>
       </State>
     </States>
   </Device>
