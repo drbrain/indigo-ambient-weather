@@ -26,6 +26,10 @@ class AmbientWeather:
         device_url = "https://api.ambientweather.net/v1/devices/%s?apiKey=%s&applicationKey=%s&limit=1" % (self.address, self.api_key, self.application_key)
 
         data = self.__GET(device_url)
+
+        if data == None:
+            return
+
         data = data[0]
 
         dateutc = datetime.fromtimestamp(data["dateutc"] / 1000)
@@ -38,11 +42,14 @@ class AmbientWeather:
         return data
 
     def __GET(self, url):
+        req = urllib2.Request(url)
+        req.add_header("User-Agent", "indigo-ambientweather")
+
         try:
-            f = urllib2.urlopen(url)
+            f = urllib2.urlopen(req, None, 60)
         except urllib2.HTTPError, e:
             self.plugin.errorLog('Error fetching %s: %s' % (url, str(e)))
-            return;
+            return
 
         response = json.load(f)
 

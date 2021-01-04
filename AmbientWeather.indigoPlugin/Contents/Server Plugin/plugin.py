@@ -27,6 +27,9 @@ class Plugin(indigo.PluginBase):
 
         data = api.latest()
 
+        if data == None:
+            return
+
         self.debugLog(str(data))
 
         for key, value in data.iteritems():
