@@ -269,6 +269,51 @@
         <TriggerLabel>Soil sensor 10 humidity</TriggerLabel>
         <ControlPageLabel>Soil sensor 10 humidity</ControlPageLabel>
       </State>
+      <State id="temp1f" readonly="true">
+        <ValueType>Number</ValueType>
+        <TriggerLabel>Temperature sensor 1</TriggerLabel>
+        <ControlPageLabel>Temperature sensor 1</ControlPageLabel>
+      </State>
+      <State id="temp2f" readonly="true">
+        <ValueType>Number</ValueType>
+        <TriggerLabel>Temperature sensor 2</TriggerLabel>
+        <ControlPageLabel>Temperature sensor 2</ControlPageLabel>
+      </State>
+      <State id="temp3f" readonly="true">
+        <ValueType>Number</ValueType>
+        <TriggerLabel>Temperature sensor 3</TriggerLabel>
+        <ControlPageLabel>Temperature sensor 3</ControlPageLabel>
+      </State>
+      <State id="temp4f" readonly="true">
+        <ValueType>Number</ValueType>
+        <TriggerLabel>Temperature sensor 4</TriggerLabel>
+        <ControlPageLabel>Temperature sensor 4</ControlPageLabel>
+      </State>
+      <State id="temp5f" readonly="true">
+        <ValueType>Number</ValueType>
+        <TriggerLabel>Temperature sensor 5</TriggerLabel>
+        <ControlPageLabel>Temperature sensor 5</ControlPageLabel>
+      </State>
+      <State id="temp6f" readonly="true">
+        <ValueType>Number</ValueType>
+        <TriggerLabel>Temperature sensor 6</TriggerLabel>
+        <ControlPageLabel>Temperature sensor 6</ControlPageLabel>
+      </State>
+      <State id="temp7f" readonly="true">
+        <ValueType>Number</ValueType>
+        <TriggerLabel>Temperature sensor 7</TriggerLabel>
+        <ControlPageLabel>Temperature sensor 7</ControlPageLabel>
+      </State>
+      <State id="temp8f" readonly="true">
+        <ValueType>Number</ValueType>
+        <TriggerLabel>Temperature sensor 8</TriggerLabel>
+        <ControlPageLabel>Temperature sensor 8</ControlPageLabel>
+      </State>
+      <State id="temp9f" readonly="true">
+        <ValueType>Number</ValueType>
+        <TriggerLabel>Temperature sensor 9</TriggerLabel>
+        <ControlPageLabel>Temperature sensor 9</ControlPageLabel>
+      </State>
       <State id="tempinf" readonly="true">
         <ValueType>Number</ValueType>
         <TriggerLabel>Outdoor temperature</TriggerLabel>
@@ -663,6 +708,16 @@
         <ValueType>Number</ValueType>
         <TriggerLabel>Indoor dew point</TriggerLabel>
         <ControlPageLabel>Indoor dew point</ControlPageLabel>
+      </State>
+      <State id="lightning_time" readonly="true">
+        <ValueType>Number</ValueType>
+        <TriggerLabel>Time of last lightning strike</TriggerLabel>
+        <ControlPageLabel>Time of last lightning strike</ControlPageLabel>
+      </State>
+      <State id="lightning_distance" readonly="true">
+        <ValueType>Number</ValueType>
+        <TriggerLabel>Distance to last lightning strike</TriggerLabel>
+        <ControlPageLabel>Distance to last lightning strike</ControlPageLabel>
       </State>
       <State id="lightning_hour" readonly="true">
         <ValueType>Number</ValueType>
