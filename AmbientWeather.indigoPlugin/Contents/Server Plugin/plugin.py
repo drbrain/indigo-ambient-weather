@@ -2,6 +2,34 @@ import indigo
 
 from ambient import AmbientWeather
 
+def appleAirQualityPM25(pm25, valid):
+    if not valid:
+        return 0 # unknown
+    elif pm25 < 12:
+        return 1 # excellent
+    elif pm25 < 35.5:
+        return 2 # good
+    elif pm25 < 55.5:
+        return 3 # fair
+    elif pm25 < 150.5:
+        return 4 # inferior
+    else:
+        return 5 # poor
+
+def appleAirQualityPM10(pm10, valid):
+    if not valid:
+        return 0 # unknown
+    elif pm10 < 55:
+        return 1 # excellent
+    elif pm10 < 155:
+        return 2 # good
+    elif pm10 < 255:
+        return 3 # fair
+    elif pm10 < 355:
+        return 4 # inferior
+    else:
+        return 5 # poor
+
 class Plugin(indigo.PluginBase):
     def __init__(self, pluginId, pluginDisplayName, pluginVersion, pluginPrefs):
         indigo.PluginBase.__init__(self, pluginId, pluginDisplayName,
@@ -14,8 +42,12 @@ class Plugin(indigo.PluginBase):
         self.weather_stations = {}
 
     def deviceStartComm(self, device):
+        if device.deviceTypeId != "station":
+            device.updateStateOnServer("onOffState", True)
+
         if device.id not in self.devices:
             self.devices[device.id] = device
+
         if device.deviceTypeId == "station":
             self.weather_stations.setdefault(device.address, [])
         else:
@@ -23,6 +55,9 @@ class Plugin(indigo.PluginBase):
             children.append(device.id)
 
     def deviceStopComm(self, device):
+        if device.deviceTypeId != "station":
+            device.updateStateOnServer("onOffState", False)
+
         if device.id in self.devices:
             self.devices.pop(device.id)
 
@@ -51,20 +86,45 @@ class Plugin(indigo.PluginBase):
 
         for childId in children:
             child = indigo.devices[childId]
-            
+
             if child.deviceTypeId == "AQIN":
                 self.debugLog("Updating AQIN %s" % child.address)
 
-                child.updateStateOnServer("sensorValue", device.states["aqi_pm25_aqin"])
+                aqi = device.states["aqi_pm25_aqin"]
+                pm25 = device.states["pm25_in_aqin"]
+                pm10 = device.states["pm10_in_aqin"]
+
+                dewpoint = device.states["dewPointin"]
+                temp = device.states["tempinf"]
+
+                valid = temp - dewpoint > 3.6
+
+                appleAirQuality = max(appleAirQualityPM25(pm25, valid), appleAirQualityPM10(pm10, valid))
+
+                child.updateStateOnServer("sensorValue", aqi)
+                child.updateStateOnServer("aqi", aqi)
                 child.updateStateOnServer("co2", device.states["co2_in_aqin"])
-                child.updateStateOnServer("pm25", device.states["pm25_in_aqin"])
-                child.updateStateOnServer("pm10", device.states["pm10_in_aqin"])
+                child.updateStateOnServer("pm25", pm25)
+                child.updateStateOnServer("pm10", pm10)
+                child.updateStateOnServer("appleAirQuality", appleAirQuality)
+                child.updateStateOnServer("valid", valid)
 
             if child.deviceTypeId == "PM25":
                 self.debugLog("Updating PM25 %s" % child.address)
 
-                child.updateStateOnServer("sensorValue", device.states["aqi_pm25"])
-                child.updateStateOnServer("pm25", device.states["pm25"])
+                aqi = device.states["aqi_pm25"]
+                pm25 = device.states["pm25"]
+
+                dewpoint = device.states["dewPoint"]
+                temp = device.states["tempf"]
+
+                valid = temp - dewpoint > 3.6
+
+                child.updateStateOnServer("sensorValue", aqi)
+                child.updateStateOnServer("aqi", aqi)
+                child.updateStateOnServer("pm25", pm25)
+                child.updateStateOnServer("appleAirQuality", appleAirQualityPM25(pm25, valid))
+                child.updateStateOnServer("valid", valid)
 
     def updateAll(self):
         for _, device in iter(self.devices.items()):

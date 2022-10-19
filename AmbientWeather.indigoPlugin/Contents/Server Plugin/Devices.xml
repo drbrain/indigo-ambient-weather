@@ -6,8 +6,11 @@
       <Field id="address" type="textfield">
         <Label>Station MAC address:</Label>
       </Field>
-      <Field id="SupportsOnState" type="checkbox" hidden="true" defaultValue="false">
+      <Field id="SupportsOnState" type="checkbox" hidden="true" defaultValue="true">
         <Label>Supports on state:</Label>
+      </Field>
+      <Field id="AllowOnStateChange" type="checkbox" hidden="true" defaultValue="false">
+        <Label>Enable changing on/off state:</Label>
       </Field>
       <Field id="SupportsSensorValue" type="checkbox" hidden="true" defaultValue="true">
         <Label>Supports SensorValue:</Label>
@@ -816,8 +819,11 @@
       <Field id="address" type="textfield">
         <Label>Station MAC address:</Label>
       </Field>
-      <Field id="SupportsOnState" type="checkbox" hidden="true" defaultValue="false">
+      <Field id="SupportsOnState" type="checkbox" hidden="true" defaultValue="true">
         <Label>Supports on state:</Label>
+      </Field>
+      <Field id="AllowOnStateChange" type="checkbox" hidden="true" defaultValue="false">
+        <Label>Enable changing on/off state:</Label>
       </Field>
       <Field id="SupportsSensorValue" type="checkbox" hidden="true" defaultValue="true">
         <Label>Supports SensorValue:</Label>
@@ -826,32 +832,36 @@
         <Label>Supports status request:</Label>
       </Field>
     </ConfigUI>
-    <UiDisplayStateId>pm25_aqi</UiDisplayStateId>
     <States>
-      <State id="sensorValue" readonly="true">
+      <State id="aqi" readonly="true">
         <ValueType>Number</ValueType>
-        <TriggerLabel>PM2.5 AQI</TriggerLabel>
-        <ControlPageLabel>PM2.5 AQI</ControlPageLabel>
+        <TriggerLabel>AQI</TriggerLabel>
+        <ControlPageLabel>AQI</ControlPageLabel>
       </State>
       <State id="co2" readonly="true">
         <ValueType>Number</ValueType>
-        <TriggerLabel>CO₂ AQI</TriggerLabel>
-        <ControlPageLabel>CO₂ AQI</ControlPageLabel>
+        <TriggerLabel>CO₂ ppm</TriggerLabel>
+        <ControlPageLabel>CO₂ ppm</ControlPageLabel>
       </State>
       <State id="pm25" readonly="true">
         <ValueType>Number</ValueType>
         <TriggerLabel>PM2.5 µg/m³</TriggerLabel>
         <ControlPageLabel>PM2.5 µg/m³</ControlPageLabel>
       </State>
-      <State id="pm25_aqi" readonly="true">
-        <ValueType>Number</ValueType>
-        <TriggerLabel>PM2.5 AQI</TriggerLabel>
-        <ControlPageLabel>PM2.5 AQI</ControlPageLabel>
-      </State>
       <State id="pm10" readonly="true">
         <ValueType>Number</ValueType>
         <TriggerLabel>PM10 µg/m³</TriggerLabel>
         <ControlPageLabel>PM10 µg/m³</ControlPageLabel>
+      </State>
+      <State id="appleAirQuality" readonly="true">
+        <ValueType>Number</ValueType>
+        <TriggerLabel>Apple Air Quality</TriggerLabel>
+        <ControlPageLabel>Apple Air Quality</ControlPageLabel>
+      </State>
+      <State id="valid" readonly="true">
+        <ValueType>Boolean</ValueType>
+        <TriggerLabel>AQI value is valid</TriggerLabel>
+        <ControlPageLabel>AQI value is valid</ControlPageLabel>
       </State>
     </States>
   </Device>
@@ -861,8 +871,11 @@
       <Field id="address" type="textfield">
         <Label>Station MAC address:</Label>
       </Field>
-      <Field id="SupportsOnState" type="checkbox" hidden="true" defaultValue="false">
+      <Field id="SupportsOnState" type="checkbox" hidden="true" defaultValue="true">
         <Label>Supports on state:</Label>
+      </Field>
+      <Field id="AllowOnStateChange" type="checkbox" hidden="true" defaultValue="false">
+        <Label>Enable changing on/off state:</Label>
       </Field>
       <Field id="SupportsSensorValue" type="checkbox" hidden="true" defaultValue="true">
         <Label>Supports SensorValue:</Label>
@@ -873,15 +886,25 @@
     </ConfigUI>
     <UiDisplayStateId>pm25_aqi</UiDisplayStateId>
     <States>
+      <State id="aqi" readonly="true">
+        <ValueType>Number</ValueType>
+        <TriggerLabel>AQI</TriggerLabel>
+        <ControlPageLabel>AQI</ControlPageLabel>
+      </State>
       <State id="pm25" readonly="true">
         <ValueType>Number</ValueType>
         <TriggerLabel>PM2.5 µg/m³</TriggerLabel>
         <ControlPageLabel>PM2.5 µg/m³</ControlPageLabel>
       </State>
-      <State id="pm25_aqi" readonly="true">
+      <State id="appleAirQuality" readonly="true">
         <ValueType>Number</ValueType>
-        <TriggerLabel>PM2.5 AQI</TriggerLabel>
-        <ControlPageLabel>PM2.5 AQI</ControlPageLabel>
+        <TriggerLabel>Apple Air Quality</TriggerLabel>
+        <ControlPageLabel>Apple Air Quality</ControlPageLabel>
+      </State>
+      <State id="valid" readonly="true">
+        <ValueType>Boolean</ValueType>
+        <TriggerLabel>AQI value is valid</TriggerLabel>
+        <ControlPageLabel>AQI value is valid</ControlPageLabel>
       </State>
     </States>
   </Device>
