@@ -381,8 +381,13 @@
       </State>
       <State id="batt_25" readonly="true">
         <ValueType>Boolean</ValueType>
-        <TriggerLabel>PM2.5 sensor battery OK</TriggerLabel>
-        <ControlPageLabel>PM2.5 sensor battery OK</ControlPageLabel>
+        <TriggerLabel>outdoor AQI sensor battery OK</TriggerLabel>
+        <ControlPageLabel>outdoor AQI sensor battery OK</ControlPageLabel>
+      </State>
+      <State id="batt_co2" readonly="true">
+        <ValueType>Boolean</ValueType>
+        <TriggerLabel>indoor AQI sensor battery OK</TriggerLabel>
+        <ControlPageLabel>indoor AQI sensor battery OK</ControlPageLabel>
       </State>
       <State id="battsm1" readonly="true">
         <ValueType>Boolean</ValueType>
@@ -491,8 +496,18 @@
       </State>
       <State id="co2" readonly="true">
         <ValueType>Number</ValueType>
-        <TriggerLabel>CO2</TriggerLabel>
-        <ControlPageLabel>CO2</ControlPageLabel>
+        <TriggerLabel>CO₂ indoor</TriggerLabel>
+        <ControlPageLabel>CO₂ indoor</ControlPageLabel>
+      </State>
+      <State id="co2_in_aqin" readonly="true">
+        <ValueType>Number</ValueType>
+        <TriggerLabel>CO₂ indoor AQI</TriggerLabel>
+        <ControlPageLabel>CO₂ indoor AQI</ControlPageLabel>
+      </State>
+      <State id="co2_in_24h_aqin" readonly="true">
+        <ValueType>Number</ValueType>
+        <TriggerLabel>CO₂ indoor 24 hour AQI</TriggerLabel>
+        <ControlPageLabel>CO₂ indoor 24 hour AQI</ControlPageLabel>
       </State>
       <State id="relay1" readonly="true">
         <ValueType>Number</ValueType>
@@ -546,23 +561,78 @@
       </State>
       <State id="pm25" readonly="true">
         <ValueType>Number</ValueType>
-        <TriggerLabel>PM2.5 air quality</TriggerLabel>
-        <ControlPageLabel>PM2.5 air quality</ControlPageLabel>
+        <TriggerLabel>PM2.5 µg/m³</TriggerLabel>
+        <ControlPageLabel>PM2.5 µg/m³</ControlPageLabel>
       </State>
       <State id="pm25_24h" readonly="true">
         <ValueType>Number</ValueType>
-        <TriggerLabel>PM2.5 air quality 24 hour average</TriggerLabel>
-        <ControlPageLabel>PM2.5 air quality 24 hour average</ControlPageLabel>
+        <TriggerLabel>PM2.5 µg/m³ 24 hour average</TriggerLabel>
+        <ControlPageLabel>PM2.5 µg/m³ 24 hour average</ControlPageLabel>
       </State>
       <State id="pm25_in" readonly="true">
         <ValueType>Number</ValueType>
-        <TriggerLabel>PM2.5 indoor air quality</TriggerLabel>
-        <ControlPageLabel>PM2.5 indoor air quality</ControlPageLabel>
+        <TriggerLabel>PM2.5 µg/m³ indoor</TriggerLabel>
+        <ControlPageLabel>PM2.5 µg/m³ indoor</ControlPageLabel>
+      </State>
+      <State id="pm25_in_aqin" readonly="true">
+        <ValueType>Number</ValueType>
+        <TriggerLabel>PM2.5 µg/m³ indoor AQI</TriggerLabel>
+        <ControlPageLabel>PM2.5 µg/m³ indoor AQI</ControlPageLabel>
       </State>
       <State id="pm25_in_24h" readonly="true">
-        <ValueType>PM2.5</ValueType>
-        <TriggerLabel>air quality 24 hour average</TriggerLabel>
-        <ControlPageLabel>air quality 24 hour average</ControlPageLabel>
+        <ValueType>Number</ValueType>
+        <TriggerLabel>PM2.5 µg/m³ indoor 24 hour average</TriggerLabel>
+        <ControlPageLabel>PM2.5 µg/m³ indoor 24 hour average</ControlPageLabel>
+      </State>
+      <State id="pm25_in_24h_aqin" readonly="true">
+        <ValueType>Number</ValueType>
+        <TriggerLabel>PM2.5 indoor 24 hour AQI</TriggerLabel>
+        <ControlPageLabel>PM2.5 indoor 24 hour AQI</ControlPageLabel>
+      </State>
+      <State id="aqi_pm25" readonly="true">
+        <ValueType>Number</ValueType>
+        <TriggerLabel>PM2.5 AQI outdoor</TriggerLabel>
+        <ControlPageLabel>PM2.5 AQI outdoor</ControlPageLabel>
+      </State>
+      <State id="aqi_pm25_24h" readonly="true">
+        <ValueType>Number</ValueType>
+        <TriggerLabel>PM2.5 AQI outdoor 24 hour average</TriggerLabel>
+        <ControlPageLabel>PM2.5 AQI outdoor 24 hour average</ControlPageLabel>
+      </State>
+      <State id="aqi_pm25_aqin" readonly="true">
+        <ValueType>Number</ValueType>
+        <TriggerLabel>PM2.5 AQI indoor</TriggerLabel>
+        <ControlPageLabel>PM2.5 AQI indoor</ControlPageLabel>
+      </State>
+      <State id="aqi_pm25_24h_aqin" readonly="true">
+        <ValueType>Number</ValueType>
+        <TriggerLabel>PM2.5 AQI indoor 24 hour average</TriggerLabel>
+        <ControlPageLabel>PM2.5 AQI indoor 24 hour average</ControlPageLabel>
+      </State>
+      <State id="pm_in_humidity_aqin" readonly="true">
+        <ValueType>Number</ValueType>
+        <TriggerLabel>indoor air quality sensor humidity</TriggerLabel>
+        <ControlPageLabel>indoor air quality sensor humidity</ControlPageLabel>
+      </State>
+      <State id="pm_in_temp_aqin" readonly="true">
+        <ValueType>Number</ValueType>
+        <TriggerLabel>indoor air quality sensor temperature</TriggerLabel>
+        <ControlPageLabel>indoor air quality sensor temperature</ControlPageLabel>
+      </State>
+      <State id="pm10_in_24h" readonly="true">
+        <ValueType>Number</ValueType>
+        <TriggerLabel>PM10 µg/m³ indoor 24 hour average</TriggerLabel>
+        <ControlPageLabel>PM10 µg/m³ indoor 24 hour average</ControlPageLabel>
+      </State>
+      <State id="pm10_in_aqin" readonly="true">
+        <ValueType>Number</ValueType>
+        <TriggerLabel>PM10 indoor AQI</TriggerLabel>
+        <ControlPageLabel>PM10 indoor AQI</ControlPageLabel>
+      </State>
+      <State id="pm10_in_24h_aqin" readonly="true">
+        <ValueType>Number</ValueType>
+        <TriggerLabel>PM10 indoor 24 hour AQI</TriggerLabel>
+        <ControlPageLabel>PM10 indoor 24 hour AQI</ControlPageLabel>
       </State>
       <State id="loc" readonly="true">
         <ValueType>String</ValueType>
